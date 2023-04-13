@@ -100,3 +100,4 @@ class LinkedList:
                     self.next()
             if self.size() == n:
                 print("해당하는 원소가 없습니다.")
+
