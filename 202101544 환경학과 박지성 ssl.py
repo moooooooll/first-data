@@ -83,4 +83,20 @@ class LinkedList:
             self.current.next = self.before.next
             self.before.next = new
             self.num_of_data += 1
-            
+
+    def remove(self,key):
+        if self.head is None:
+            return None       
+        else:
+            n = self.size()
+            self.first()
+            for i in range(n-1):
+                value = self.current.data
+                if value == key:
+                    self.delete()
+                    print("%d번째 원소(%d)를 삭제합니다."%(i,key))
+                    self.next()
+                else:
+                    self.next()
+            if self.size() == n:
+                print("해당하는 원소가 없습니다.")
